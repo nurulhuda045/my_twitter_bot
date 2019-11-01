@@ -1,18 +1,22 @@
 import tweepy
 import time
-print('This is my bot')
 
 
-CONSUMER_KEY = 'QgTjPyVRF5HDk2Xj4navjBzU7'
-CONSUMER_SECRET = '577Fh74xA5XRPCQtiZJ03q0qQUjqJMzMjJaNRvATF6XAHOMcUK'
-ACCESS_KEY = '1105871214600323072-9614fhlvtpSUKK0XiSzBPwrZa8YSRe'
-ACCESS_SECRET = 'B1MPtfIij6HFizjAIrj7xNqJrYcSUmCsyGu6HJFW4hm5l'
+
+
+
+CONSUMER_KEY = 'xxxxxxx'
+CONSUMER_SECRET = 'xxxxxxxxx'
+ACCESS_KEY = 'xxxxxxxx'
+ACCESS_SECRET = 'xxxxxxx'
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 FILE_NAME = 'last_seen_id.txt'
+
+print('This is my bot')
 
 def retrieve_last_seen_id(file_name):
     f_read = open(file_name, 'r')
