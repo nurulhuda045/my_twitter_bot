@@ -40,9 +40,10 @@ def reply_to_tweets():
                     tweet_mode = 'extended')
     for mention in reversed(mentions):
         print(str(mention.id) + '-' + mention.full_text)
+        text = mention.full_text
         last_seen_id = mention.id
         store_last_seen_id(last_seen_id, FILE_NAME)
-        if '#HelloWorld' in mention.full_text.lower():
+        if '#helloWorld' in text.lower():
             print('found tweets...')
             print('responding_back!')
             api.update_status('@' + mention.user.screen_name + ' Thanks for tweet!', mention.id)
